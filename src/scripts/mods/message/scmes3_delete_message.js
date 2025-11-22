@@ -1,0 +1,1 @@
+// src/scripts/mods/message/scmes3_delete_message.js

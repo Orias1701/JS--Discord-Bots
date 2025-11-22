@@ -1,0 +1,1 @@
+// src/commands/logs/colog6_set_logs.js

@@ -1,0 +1,1 @@
+// src/scripts/logs/sclog2_bot_info.js

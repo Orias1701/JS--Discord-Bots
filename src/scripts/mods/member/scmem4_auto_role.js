@@ -1,0 +1,1 @@
+// src/scripts/mods/member/scmem4_auto_role.js

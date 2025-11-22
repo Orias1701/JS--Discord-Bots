@@ -1,0 +1,1 @@
+// src/commands/mods/member/comem10_kick.js

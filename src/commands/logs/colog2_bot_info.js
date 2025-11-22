@@ -1,0 +1,1 @@
+// src/commands/logs/colog2_bot_info.js

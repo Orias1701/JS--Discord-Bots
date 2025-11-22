@@ -1,0 +1,1 @@
+// src/events/mods/member/evmem11_ban.js

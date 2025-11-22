@@ -1,0 +1,1 @@
+// src/scripts/mods/member/scmem10_kick.js

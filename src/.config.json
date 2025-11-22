@@ -1,0 +1,81 @@
+{
+    "general": {
+        "name": "Orias's Pet",
+        "role": "Master",
+        "tier": "Premium"
+    },
+    "scripts": {
+        "logs": {
+            "user": "user_info",
+            "bot": "bot_info",
+            "role": "role_info",
+            "channel": "channel_info",
+            "server": "server_info",
+            "setLogs": "set_logs"
+        },
+        "mods": {
+            "channel": {
+                "clone": "clone_chanel",
+                "create": "create_chanel",
+                "delete": "delete_chanel",
+                "lock": "lock_chanel",
+                "unlock": "unlock_chanel"
+            },
+            "member": {
+                "level": "level",
+                "role": "role",
+                "unrole": "unrole",
+                "autorole": "auto_role",
+                "warn": "warn",
+                "unwarn": "unwarn",
+                "mute": "mute",
+                "unmute": "unmute",
+                "move": "move",
+                "kick": "kick",
+                "ban": "ban"
+            },
+            "message": {
+                "send": "send_message",
+                "edit": "edit_message",
+                "delete": "delete_message",
+                "pin": "pin_message",
+                "unpin": "unpin_message"
+            }
+        },
+        "services": {
+            "game": {
+                "rps": "rps",
+                "gamble": "gamble",
+                "flipcoin": "flipcoin"
+            },
+            "music": {
+                "auto": "autoplay",
+                "play": "play",
+                "pause": "pause",
+                "resume": "resume",
+                "skip": "skip",
+                "stop": "stop",
+                "queue": "queue",
+                "remove": "queue_remove",
+                "shuffle": "queue_shuffle"
+            }
+        },
+        "tests": {
+            "ping": "ping",
+            "health": "health",
+            "uptime": "uptime"
+        },
+        "utilities": {
+            "help": "help",
+            "setup": "setup",
+            "setEmbed": "set_embed",
+            "setPrefix": "set_prefix",
+            "setAutoRole": "set_autorole",
+            "setWelcome": "set_welcome",
+            "setLeave": "set_leave",
+            "backup": "backup_config",
+            "restore": "restore_config",
+            "dashboard": "dashboard"
+        }
+    }
+}

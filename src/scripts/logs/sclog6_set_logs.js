@@ -1,0 +1,1 @@
+// src/scripts/logs/sclog6_set_logs.js

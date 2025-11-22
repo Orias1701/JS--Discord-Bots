@@ -1,0 +1,1 @@
+// src/events/mods/message/evmes4_pin_message.js

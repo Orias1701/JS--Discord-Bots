@@ -1,0 +1,1 @@
+// src/scripts/mods/member/scmem5_warn.js

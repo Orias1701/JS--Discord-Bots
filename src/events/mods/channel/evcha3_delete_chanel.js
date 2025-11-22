@@ -1,0 +1,1 @@
+// src/events/mods/channel/evcha3_delete_chanel.js
