@@ -34,14 +34,14 @@ const rest = new REST().setToken(process.env.DISCORD_TOKEN);
         // Đăng ký cho Server riêng (nhanh)
         if (process.env.GUILD_ID) {
             await rest.put(
-                Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID),
+                Routes.applicationGuildCommands(process.env.APPLICATION_ID, process.env.GUILD_ID),
                 { body: commands },
             );
             console.log('✅ Đã đăng ký lệnh cho Server Guild thành công!');
         } else {
             // Đăng ký toàn cục
             await rest.put(
-                Routes.applicationCommands(process.env.CLIENT_ID),
+                Routes.applicationCommands(process.env.APPLICATION_ID),
                 { body: commands },
             );
             console.log('✅ Đã đăng ký lệnh toàn cục thành công!');
