@@ -1,1 +1,0 @@
-// src/commands/mods/message/comes4_pin_message.js

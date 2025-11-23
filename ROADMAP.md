@@ -10,28 +10,28 @@
 
 * [X] Viết **env.js** 				# Đọc .env và đưa các secret vào các biến
 * [X] Viết **src/.config.json.** 		# Định nghĩa các tên chức năng và lệnh command tương ứng
-* [ ] Viết **src/.config.js.** 			# Đọc config.json và lưu các lệnh vào các biến để các module khác sử dụng lại
-* [ ] Viết **src/index.js.**
-* [ ] Thiết lập **Script Handler.**
-* [ ] Thiết lập **Command Handler**.
-* [ ] Thiết lập **Event Handler.**
+* [X] Viết **src/.config.js.** 			# Đọc config.json và lưu các lệnh vào các biến để các module khác sử dụng lại
+* [X] Viết **src/index.js.**
+* [X] Thiết lập **Script Handler.**
+* [X] Thiết lập **Command Handler**.
+* [X] Thiết lập **Event Handler.**
 
 ## Giai đoạn 3: Phát triển Tính năng
 
 ### Scripts -- Các hàm build sẵn để xử lý các tác vụ khi được gọi đến
 
-* [ ] Script Logs
+* [X] Script Logs
 * [ ] Script Mods
 * [ ] Script Services
-* [ ] Script Tests
+* [X] Script Tests
 * [ ] Script Utilities
 
 ### Commands -- Tiếp nhận command của user và gọi các Script tương ứng để thực hiện chức năng
 
-* [ ] Commands Logs
+* [X] Commands Logs
 * [ ] Commands Mods
 * [ ] Commands Services
-* [ ] Commands Tests
+* [X] Commands Tests
 * [ ] Commands Utilities
 
 ### Events -- Phản ứng với sự kiện và gọi các Script tương ứng để thực hiện chức năng

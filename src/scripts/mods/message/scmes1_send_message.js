@@ -1,1 +1,0 @@
-// src/scripts/mods/message/scmes1_send_message.js

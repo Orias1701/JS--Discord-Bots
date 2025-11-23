@@ -1,1 +1,0 @@
-// src/scripts/mods/channel/sccha2_create_chanel.js

@@ -1,1 +1,0 @@
-// src/commands/tests/cotes1_ping.js

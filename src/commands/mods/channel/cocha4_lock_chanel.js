@@ -1,1 +1,0 @@
-// src/commands/mods/channel/cocha4_lock_chanel.js

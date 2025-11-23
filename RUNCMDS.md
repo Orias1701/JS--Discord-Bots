@@ -12,8 +12,13 @@ node gen.js
 
 ```
 npm install
-npm run deploy
-npm start
 ```
 
 ---
+
+## RUN
+
+```
+npm run deploy
+npm start
+```

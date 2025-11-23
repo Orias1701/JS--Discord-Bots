@@ -1,1 +1,0 @@
-// src/events/mods/message/evmes3_delete_message.js

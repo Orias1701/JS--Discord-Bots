@@ -42,7 +42,7 @@ function traverse(obj, currentPath, rootKey, parentKey) {
 const TARGET_FOLDERS = ["commands", "events", "scripts"];
 
 for (const folder of TARGET_FOLDERS) {
-    const ROOT = path.join(__dirname, "src", folder);
+    const ROOT = path.join(__dirname, "temp", folder);
     ensureDir(ROOT);
     traverse(config.scripts, ROOT, folder, folder);
     console.log(`✔ Generated files for: ${folder}`);

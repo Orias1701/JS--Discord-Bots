@@ -1,1 +1,0 @@
-// src/events/mods/channel/evcha2_create_chanel.js

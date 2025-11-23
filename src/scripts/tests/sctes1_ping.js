@@ -1,1 +1,0 @@
-// src/scripts/tests/sctes1_ping.js

@@ -1,1 +1,0 @@
-// src/scripts/mods/message/scmes2_edit_message.js

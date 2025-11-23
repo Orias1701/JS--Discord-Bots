@@ -15,47 +15,47 @@
         },
         "mods": {
             "channel": {
-                "clone": "clone_chanel",
-                "create": "create_chanel",
-                "delete": "delete_chanel",
-                "lock": "lock_chanel",
-                "unlock": "unlock_chanel"
+                "clone": "chanel_clone",
+                "create": "chanel_create",
+                "delete": "chanel_delete",
+                "lock": "chanel_lock",
+                "unlock": "chanel_unlock"
             },
             "member": {
-                "level": "level",
-                "role": "role",
-                "unrole": "unrole",
-                "autorole": "auto_role",
-                "warn": "warn",
-                "unwarn": "unwarn",
-                "mute": "mute",
-                "unmute": "unmute",
-                "move": "move",
-                "kick": "kick",
-                "ban": "ban"
+                "level": "user_level",
+                "role": "user_role",
+                "unrole": "user_unrole",
+                "autorole": "user_autorole",
+                "warn": "user_warn",
+                "unwarn": "user_unwarn",
+                "mute": "user_mute",
+                "unmute": "user_unmute",
+                "move": "user_move",
+                "kick": "user_kick",
+                "ban": "user_ban"
             },
             "message": {
-                "send": "send_message",
-                "edit": "edit_message",
-                "delete": "delete_message",
-                "pin": "pin_message",
-                "unpin": "unpin_message"
+                "send": "message_send",
+                "edit": "message_edit",
+                "delete": "message_delete",
+                "pin": "message_pin",
+                "unpin": "message_unpin"
             }
         },
         "services": {
             "game": {
-                "rps": "rps",
-                "gamble": "gamble",
-                "flipcoin": "flipcoin"
+                "rps": "game_rps",
+                "gamble": "game_gamble",
+                "flipcoin": "game_flipcoin"
             },
             "music": {
-                "auto": "autoplay",
-                "play": "play",
-                "pause": "pause",
-                "resume": "resume",
-                "skip": "skip",
-                "stop": "stop",
-                "queue": "queue",
+                "auto": "song_autoplay",
+                "play": "song_play",
+                "pause": "song_pause",
+                "resume": "song_resume",
+                "skip": "song_skip",
+                "stop": "song_stop",
+                "queue": "queue_add",
                 "remove": "queue_remove",
                 "shuffle": "queue_shuffle"
             }
@@ -73,8 +73,8 @@
             "setAutoRole": "set_autorole",
             "setWelcome": "set_welcome",
             "setLeave": "set_leave",
-            "backup": "backup_config",
-            "restore": "restore_config",
+            "backup": "config_backup",
+            "restore": "config_restore",
             "dashboard": "dashboard"
         }
     }

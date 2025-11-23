@@ -1,1 +1,0 @@
-// src/commands/mods/message/comes3_delete_message.js
