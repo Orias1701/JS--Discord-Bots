@@ -18,18 +18,22 @@ module.exports = async (interaction, client) => {
     const roles = member.roles.cache
         .filter(r => r.name !== '@everyone')
         .map(r => `<@&${r.id}>`)
-        .join(', ') || "Không có";
+        .join(', ') || "None";
 
     const embed = new EmbedBuilder()
         .setColor(member.displayHexColor)
         .setTitle(`✦ ${targetUser.username}`)
         .setThumbnail(targetUser.displayAvatarURL({ dynamic: true }))
         .addFields(
-            { name: 'ID', value: targetUser.id, inline: true },
-            { name: 'Tên hiển thị', value: member.displayName, inline: true },
-            { name: 'Ngày tạo acc', value: createdAt, inline: true },
-            { name: 'Ngày vào server', value: joinedAt, inline: true },
-            { name: 'Roles', value: roles }
+            { name: 'UID', value: targetUser.id, inline: true },
+            { name: '\u200B', value: '\u200B', inline: true },
+            { name: '\u200B', value: '\u200B', inline: true },
+            { name: 'Name', value: member.displayName, inline: true },
+            { name: 'Roles', value: roles, inline: true },
+            { name: '\u200B', value: '\u200B', inline: true },
+            { name: 'Join Discord', value: createdAt, inline: true },
+            { name: 'Join Server', value: joinedAt, inline: true },
+            { name: '\u200B', value: '\u200B', inline: true }
         ).setImage(mainImageURL).setTimestamp();
 
     await interaction.reply({ embeds: [embed] });

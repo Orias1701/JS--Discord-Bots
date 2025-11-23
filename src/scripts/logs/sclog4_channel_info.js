@@ -6,6 +6,17 @@ const mainImageURL = config.resource.mainImageURL;
 module.exports = async (interaction, client) => {
     const channel = interaction.options.getChannel('target') || interaction.channel;
 
+    const created = new Date(channel.createdTimestamp);
+
+    const formatted = new Intl.DateTimeFormat('vi-VN', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true
+    }).format(created);
+
     let typeName = 'Unknown';
     if (channel.type === ChannelType.GuildText) typeName = 'Text Channel';
     if (channel.type === ChannelType.GuildVoice) typeName = 'Voice Channel';
@@ -16,12 +27,12 @@ module.exports = async (interaction, client) => {
         .setColor('#e67e22')
         .setTitle(`✦ Channel: ${channel.name}`)
         .addFields(
-            { name: 'ID', value: channel.id, inline: true },
-            { name: 'Loại', value: typeName, inline: true },
-            { name: 'Thuộc Category', value: channel.parent ? channel.parent.name : 'Không có', inline: true },
-            { name: 'NSFW', value: channel.nsfw ? 'Có' : 'Không', inline: true },
-            { name: 'Slowmode', value: channel.rateLimitPerUser ? `${channel.rateLimitPerUser} giây` : 'Tắt', inline: true },
-            { name: 'Ngày tạo', value: `<t:${Math.floor(channel.createdTimestamp / 1000)}:f>`, inline: false }
+            { name: 'Channel ID', value: channel.id, inline: true },
+            { name: 'Type', value: typeName, inline: true },
+            { name: 'Category', value: channel.parent ? channel.parent.name : 'None', inline: true },
+            { name: 'Creation', value: formatted, inline: true },
+            { name: 'NSFW', value: channel.nsfw ? 'Yes' : 'No', inline: true },
+            { name: 'Slowmode', value: channel.rateLimitPerUser ? `${channel.rateLimitPerUser}s` : 'Off', inline: true }
         ).setImage(mainImageURL).setTimestamp();
         
     if (channel.topic) {

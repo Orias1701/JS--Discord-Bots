@@ -24,7 +24,17 @@ module.exports = async (interaction, client) => {
     const newsChannels = channels.filter(c => c.type === ChannelType.GuildAnnouncement).size;
     
     // Tính toán channel "khác"
-    const otherChannels = totalChannels - (categories + textChannels + voiceChannels + forumChannels + stageChannels + newsChannels);
+    const numChannels = totalChannels - categories;
+    const created = new Date(guild.createdTimestamp);
+
+    const formatted = new Intl.DateTimeFormat('vi-VN', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true
+    }).format(created);
 
     const embed = new EmbedBuilder()
         .setColor('#1abc9c')
@@ -32,17 +42,16 @@ module.exports = async (interaction, client) => {
         .setThumbnail(guild.iconURL({ dynamic: true }))
         .setImage(guild.bannerURL({ size: 1024 }))
         .addFields(
+            { name: 'Server ID', value: guild.id, inline: false },
             { name: 'Owner', value: `<@${owner.id}>`, inline: true },
-            { name: 'Server ID', value: guild.id, inline: true },
-            { name: 'Creation', value: `<t:${Math.floor(guild.createdTimestamp / 1000)}:R>`, inline: true },
+            { name: 'Boost', value: `Level ${guild.premiumTier || 0}`, inline: true },
+            { name: 'Creation', value: formatted, inline: true },
             { name: 'Roles', value: `**${guild.roles.cache.size}** roles`, inline: true },
             { name: 'Members', value: `**${guild.memberCount}** users`, inline: true },
-            { name: 'Boost', value: `Level ${guild.premiumTier || 0}`, inline: true },
-            { 
-                name: `Categories: ${categories}   -   Channels: ${totalChannels - categories}`, 
-                value: "",
-                inline: false 
-            }
+            { name: '\u200B', value: '\u200B', inline: true },
+            { name: `Categories`, value: `${categories}`, inline: true },
+            { name: `Channels`, value: `${numChannels}`, inline: true },
+            { name: '\u200B', value: '\u200B', inline: true }
         ).setImage(mainImageURL).setTimestamp();
 
     // Sử dụng editReply vì đã deferReply ở trên

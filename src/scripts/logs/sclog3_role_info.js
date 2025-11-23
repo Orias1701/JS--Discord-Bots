@@ -16,12 +16,14 @@ module.exports = async (interaction, client) => {
         .setColor(role.color || '#95a5a6')
         .setTitle(`✦ Role: ${role.name}`)
         .addFields(
-            { name: 'Role ID', value: role.id, inline: true },
+            { name: 'Role ID', value: role.id, inline: false },
             { name: 'Color', value: role.hexColor, inline: true },
-            { name: 'Members', value: `${role.members.size} thành viên`, inline: true },
-            { name: 'Hoisted', value: role.hoist ? 'Có (Tách biệt)' : 'Không', inline: true },
-            { name: 'Mentionable', value: role.mentionable ? 'Có' : 'Không', inline: true },
-            { name: 'Key Permissions', value: importantPerms, inline: false }
+            { name: 'Members', value: `${role.members.size} members`, inline: true },
+            { name: '\u200B', value: '\u200B', inline: true },
+            { name: 'Mentionable', value: role.mentionable ? 'Yes' : 'No', inline: true },
+            { name: 'Hoisted', value: role.hoist ? 'Yes' : 'No', inline: true },
+            { name: '\u200B', value: '\u200B', inline: true },
+            { name: 'Key Permissions', value: importantPerms, inline: false },
         ).setImage(mainImageURL).setTimestamp();
 
     await interaction.reply({ embeds: [embed] });
