@@ -1,5 +1,7 @@
 // src/scripts/logs/sclog1_user_info.js
 const { EmbedBuilder } = require('discord.js');
+const config = require('../../.config');
+const mainImageURL = config.resource.mainImageURL;
 
 module.exports = async (interaction, client) => {
     // Lấy user được tag, nếu không có thì lấy chính người gõ lệnh
@@ -28,9 +30,7 @@ module.exports = async (interaction, client) => {
             { name: 'Ngày tạo acc', value: createdAt, inline: true },
             { name: 'Ngày vào server', value: joinedAt, inline: true },
             { name: 'Roles', value: roles }
-        )
-        // .setFooter({ text: ``, iconURL: interaction.user.displayAvatarURL() })
-        .setTimestamp();
+        ).setImage(mainImageURL).setTimestamp();
 
     await interaction.reply({ embeds: [embed] });
 };

@@ -3,7 +3,7 @@ const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('delete_message')
+        .setName('message_delete')
         .setDescription('Xóa tin nhắn hàng loạt với bộ lọc nâng cao')
         // Tùy chọn 1: Số lượng quét (Bắt buộc)
         .addIntegerOption(option =>
@@ -40,7 +40,7 @@ module.exports = {
         .setDefaultMemberPermissions(PermissionFlagsBits.ManageMessages),
 
     async execute(interaction, client) {
-        const scriptName = 'comes3_message_delete';
+        const scriptName = 'scmes3_message_delete';
         const script = client.scripts.get(scriptName);
 
         if (!script) return interaction.reply({ content: `❌ Lỗi script: ${scriptName}`, ephemeral: true });

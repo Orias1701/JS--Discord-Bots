@@ -4,6 +4,10 @@
         "role": "Master",
         "tier": "Premium"
     },
+    "resource": {
+        "mainImageURL": "https://github.com/Orias1701/Resources--Discord-Bots/blob/main/img/pet.png?raw=true",
+        "thumbnailURL": "https://github.com/Orias1701/Resources--Discord-Bots/blob/main/img/Paimon.png?raw=true"
+    },
     "scripts": {
         "logs": {
             "user": "user_info",

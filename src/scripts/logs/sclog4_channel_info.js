@@ -1,5 +1,7 @@
 // src/scripts/logs/sclog4_channel_info.js
 const { EmbedBuilder, ChannelType } = require('discord.js');
+const config = require('../../.config');
+const mainImageURL = config.resource.mainImageURL;
 
 module.exports = async (interaction, client) => {
     const channel = interaction.options.getChannel('target') || interaction.channel;
@@ -20,8 +22,8 @@ module.exports = async (interaction, client) => {
             { name: 'NSFW', value: channel.nsfw ? 'Có' : 'Không', inline: true },
             { name: 'Slowmode', value: channel.rateLimitPerUser ? `${channel.rateLimitPerUser} giây` : 'Tắt', inline: true },
             { name: 'Ngày tạo', value: `<t:${Math.floor(channel.createdTimestamp / 1000)}:f>`, inline: false }
-        );
-
+        ).setImage(mainImageURL).setTimestamp();
+        
     if (channel.topic) {
         embed.setDescription(`**Topic:** ${channel.topic}`);
     }

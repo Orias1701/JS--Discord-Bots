@@ -1,5 +1,7 @@
 // src/scripts/logs/sclog5_server_info.js
 const { EmbedBuilder, ChannelType } = require('discord.js');
+const config = require('../../.config');
+const mainImageURL = config.resource.mainImageURL;
 
 module.exports = async (interaction, client) => {
     // [FIX] Báo cho Discord biết bot đang xử lý để tránh timeout và tạo tin nhắn chờ
@@ -20,7 +22,7 @@ module.exports = async (interaction, client) => {
     const forumChannels = channels.filter(c => c.type === ChannelType.GuildForum).size;
     const stageChannels = channels.filter(c => c.type === ChannelType.GuildStageVoice).size;
     const newsChannels = channels.filter(c => c.type === ChannelType.GuildAnnouncement).size;
-    const mainImageURL = "https://github.com/Orias1701/Resources--Discord-Bots/blob/main/img/pet.png?raw=true";
+    
     // Tính toán channel "khác"
     const otherChannels = totalChannels - (categories + textChannels + voiceChannels + forumChannels + stageChannels + newsChannels);
 
@@ -41,9 +43,7 @@ module.exports = async (interaction, client) => {
                 value: "",
                 inline: false 
             }
-        )
-        .setImage(mainImageURL)
-        .setTimestamp();
+        ).setImage(mainImageURL).setTimestamp();
 
     // Sử dụng editReply vì đã deferReply ở trên
     await interaction.editReply({ embeds: [embed] });

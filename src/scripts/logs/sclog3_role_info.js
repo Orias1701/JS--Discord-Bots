@@ -1,5 +1,7 @@
 // src/scripts/logs/sclog3_role_info.js
 const { EmbedBuilder } = require('discord.js');
+const config = require('../../.config');
+const mainImageURL = config.resource.mainImageURL;
 
 module.exports = async (interaction, client) => {
     const role = interaction.options.getRole('role');
@@ -20,8 +22,7 @@ module.exports = async (interaction, client) => {
             { name: 'Hoisted', value: role.hoist ? 'Có (Tách biệt)' : 'Không', inline: true },
             { name: 'Mentionable', value: role.mentionable ? 'Có' : 'Không', inline: true },
             { name: 'Key Permissions', value: importantPerms, inline: false }
-        )
-        // .setFooter({ text: `` });
+        ).setImage(mainImageURL).setTimestamp();
 
     await interaction.reply({ embeds: [embed] });
 };

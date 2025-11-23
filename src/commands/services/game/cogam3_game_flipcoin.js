@@ -7,7 +7,7 @@ module.exports = {
         .setDescription('Tung một đồng xu (Sấp/Ngửa)'),
 
     async execute(interaction, client) {
-        const scriptName = 'cogam3_game_flipcoin';
+        const scriptName = 'scgam3_game_flipcoin';
         const script = client.scripts.get(scriptName);
         if (!script) return interaction.reply({ content: `❌ Lỗi script: ${scriptName}`, ephemeral: true });
         
