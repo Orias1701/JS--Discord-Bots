@@ -18,21 +18,18 @@ JS--Discord-Bots
 │    │    ├─ logs/
 │    │    ├─ mods/
 │    │    ├─ services/
-│    │    ├─ tests/
 │    │    └─ utilities/
 │    │
 │    ├─ events/
 │    │    ├─ logs/
 │    │    ├─ mods/
 │    │    ├─ services/
-│    │    ├─ tests/
 │    │    └─ utilities/
 │    │
 │    ├─ scripts/
 │    │    ├─ logs/
 │    │    ├─ mods/
 │    │    ├─ services/
-│    │    ├─ tests/
 │    │    └─ utilities/
 │    │
 │    ├─ .config.js

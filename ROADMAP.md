@@ -23,7 +23,6 @@
 * [X] Script Logs
 * [ ] Script Mods
 * [ ] Script Services
-* [X] Script Tests
 * [ ] Script Utilities
 
 ### Commands -- Tiếp nhận command của user và gọi các Script tương ứng để thực hiện chức năng
@@ -31,7 +30,6 @@
 * [X] Commands Logs
 * [ ] Commands Mods
 * [ ] Commands Services
-* [X] Commands Tests
 * [ ] Commands Utilities
 
 ### Events -- Phản ứng với sự kiện và gọi các Script tương ứng để thực hiện chức năng
@@ -39,7 +37,6 @@
 * [ ] Commands Logs
 * [ ] Commands Mods
 * [ ] Commands Services
-* [ ] Commands Tests
 * [ ] Commands Utilities
 
 ## Giai đoạn 4: Deployment

@@ -60,11 +60,6 @@
                 "shuffle": "queue_shuffle"
             }
         },
-        "tests": {
-            "ping": "ping",
-            "health": "health",
-            "uptime": "uptime"
-        },
         "utilities": {
             "help": "help",
             "setup": "setup",
