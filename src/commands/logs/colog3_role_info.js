@@ -1,4 +1,5 @@
 // src/commands/logs/colog3_role_info.js
+
 const { SlashCommandBuilder } = require('discord.js');
 
 module.exports = {

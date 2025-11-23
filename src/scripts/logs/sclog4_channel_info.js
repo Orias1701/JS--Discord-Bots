@@ -1,5 +1,7 @@
 // src/scripts/logs/sclog4_channel_info.js
+
 const { EmbedBuilder, ChannelType } = require('discord.js');
+const { formatShortDate } = require('../../utils/date');
 const config = require('../../.config');
 const mainImageURL = config.resource.mainImageURL;
 
@@ -7,15 +9,7 @@ module.exports = async (interaction, client) => {
     const channel = interaction.options.getChannel('target') || interaction.channel;
 
     const created = new Date(channel.createdTimestamp);
-
-    const formatted = new Intl.DateTimeFormat('vi-VN', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit',
-        hour12: true
-    }).format(created);
+    const formattedDate = formatShortDate(created);
 
     let typeName = 'Unknown';
     if (channel.type === ChannelType.GuildText) typeName = 'Text Channel';
@@ -30,7 +24,7 @@ module.exports = async (interaction, client) => {
             { name: 'Channel ID', value: channel.id, inline: true },
             { name: 'Type', value: typeName, inline: true },
             { name: 'Category', value: channel.parent ? channel.parent.name : 'None', inline: true },
-            { name: 'Creation', value: formatted, inline: true },
+            { name: 'Creation', value: formattedDate, inline: true },
             { name: 'NSFW', value: channel.nsfw ? 'Yes' : 'No', inline: true },
             { name: 'Slowmode', value: channel.rateLimitPerUser ? `${channel.rateLimitPerUser}s` : 'Off', inline: true }
         ).setImage(mainImageURL).setTimestamp();

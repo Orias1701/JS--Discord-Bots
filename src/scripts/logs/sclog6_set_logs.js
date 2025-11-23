@@ -1,4 +1,5 @@
 // src/scripts/logs/sclog6_set_logs.js
+
 const fs = require('fs');
 const path = require('path');
 

@@ -1,4 +1,5 @@
 // src/scripts/logs/sclog3_role_info.js
+
 const { EmbedBuilder } = require('discord.js');
 const config = require('../../.config');
 const mainImageURL = config.resource.mainImageURL;

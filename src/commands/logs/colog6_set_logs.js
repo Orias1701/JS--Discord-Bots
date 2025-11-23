@@ -1,4 +1,5 @@
 // src/commands/logs/colog6_set_logs.js
+
 const { SlashCommandBuilder, PermissionFlagsBits, ChannelType } = require('discord.js');
 
 module.exports = {

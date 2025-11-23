@@ -1,4 +1,5 @@
 // src/commands/logs/colog2_bot_info.js
+
 const { SlashCommandBuilder } = require('discord.js');
 
 module.exports = {
